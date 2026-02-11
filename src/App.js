@@ -1,11 +1,11 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import About from './components/About';
-import Contact from './components/Contact';
-import LoginPage from './components/LoginPage';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import LoginPage from './pages/LoginPage';
 import PrivateRoute from './PrivateRoute';
-import NotFound from './components/NotFound';
+import NotFound from './pages/NotFound';
 import { BrowserRouter } from 'react-router-dom';
 import { CounterProvider } from './context/counterContext';
 

@@ -1,4 +1,4 @@
-import Nav from './Nav'
+import Nav from '../components/Nav'
 import { useContext, useState } from 'react'
 import { CounterContext } from '../context/counterContext'
 
