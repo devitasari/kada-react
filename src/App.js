@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
+import LoginPage from './components/LoginPage';
+import PrivateRoute from './PrivateRoute';
+import NotFound from './components/NotFound';
+import { BrowserRouter } from 'react-router-dom';
+import { CounterProvider } from './context/counterContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CounterProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={ <Home></Home>}></Route>
+          <Route path='/about' element={ <About></About>}></Route>
+          <Route path='/contact' element={<PrivateRoute><Contact></Contact></PrivateRoute>}></Route>
+          <Route path='/login' element={ <LoginPage></LoginPage>}></Route>
+          <Route path='*' element={<NotFound></NotFound>}></Route>
+        </Routes>
+      </BrowserRouter>
+    </CounterProvider>
   );
 }
 
