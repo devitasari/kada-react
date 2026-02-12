@@ -7,11 +7,10 @@ import LoginPage from './pages/LoginPage';
 import PrivateRoute from './PrivateRoute';
 import NotFound from './pages/NotFound';
 import { BrowserRouter } from 'react-router-dom';
-import { CounterProvider } from './context/counterContext';
+// import { CounterProvider } from './context/counterContext';
 
 function App() {
   return (
-    <CounterProvider>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={ <Home></Home>}></Route>
@@ -21,7 +20,6 @@ function App() {
           <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
       </BrowserRouter>
-    </CounterProvider>
   );
 }
 
