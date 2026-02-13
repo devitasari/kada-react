@@ -11,6 +11,7 @@ const Home = () => {
 
     const count = useSelector((state) => state.counter.count)
     const stateName = useSelector((state) => state.counter.name)
+    const message = useSelector((state) => state.counter.message)
     const users = useSelector((state) => state.user.users)
 
     const [ name, setName ] = useState('')
