@@ -40,7 +40,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://698d3254b79d1c928ed4abb3.mockapi.io",
   "engines": {
     "node": "24.x"
   }
