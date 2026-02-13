@@ -4,7 +4,7 @@ export const fetchUsers = createAsyncThunk(
   'users/fetchUsers',
   async () => {
     const response = await fetch(
-      `${process.env.BASE_URL}/api/v1/users`
+      `${process.env.REACT_APP_BASE_URL}/api/v1/users`
     )
 
     if (!response.ok) {
